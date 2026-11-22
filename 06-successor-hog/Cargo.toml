@@ -1,0 +1,16 @@
+[package]
+name = "successor-hog"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.98.1"
+publish = false
+
+[dependencies]
+junco-core = { path = "../junco-policy/crates/junco-core", features = ["std"] }
+history-store = { path = "../junco-policy/crates/history-store", features = ["runtime", "std"] }
+history-semantics = { path = "../junco-policy/crates/history-semantics", features = ["runtime", "std", "cache"] }
+history-syntax = { path = "../junco-policy/crates/history-syntax", features = ["std"] }
+junco-policy = { path = "../junco-policy" }
+
+[profile.release]
+debug = false
